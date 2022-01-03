@@ -1,23 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap");
 
 :root {
-  --font-primary: 'Barlow', sans-serif;;
-  --font-secondary: font-family: 'Fraunces', serif;
+  --font-primary: "Barlow", sans-serif;
+  --font-secondary: "Fraunces", serif;
   --font-size: 18px;
   --soft-red: hsl(7, 99%, 70%);
+  --soft-red-bg: hsl(30, 75%, 98%);
   --yellow: hsl(51, 100%, 49%);
   --desaturated-cyan: hsl(167, 40%, 24%);
   --dark-blue: hsl(198, 62%, 26%);
   --moderate-cyan: hsl(168, 34%, 41%);
+  --footer-bg: hsl(167, 44%, 70%);
   --desaturated-blue: hsl(212, 27%, 19%);
   --verydark-grayish-blue: hsl(213, 9%, 39%);
-  --dark-grayish-blue:hsl(232, 10%, 55%);
+  --dark-grayish-blue: hsl(232, 10%, 55%);
   --grayish-blue: hsl(210, 4%, 67%);
   --white: hsl(0, 0%, 100%);
+  --svg-color: hsl(168, 45%, 32%);
 }
 
 /* CSS Reset */
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -26,12 +31,141 @@
 body {
   font-family: var(--font-primary);
   font-size: var(--font-size);
+  display: grid;
+  grid-template-columns: auto;
+  align-content: center;
+  justify-content: center;
+}
+
+h1,
+h2 {
+  font-family: var(--font-secondary);
 }
 
 .mobile {
   display: none;
 }
-/* Footer Sectin */
+.container {
+  width: min(100%, 1440px);
+}
+
+/* Header Section */
+.header-section {
+  background-image: url(../images/desktop/image-header.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  color: var(--white);
+  padding: 3rem 2.5rem;
+  height: 100vh;
+}
+
+.nav-item {
+  display: inline-block;
+  list-style-type: none;
+  padding: 0 1.9rem;
+}
+
+.contact {
+  background-color: var(--white);
+  color: var(--desaturated-blue);
+  font-family: var(--font-secondary);
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+}
+
+.header-text {
+  grid-column: span 2;
+  text-align: center;
+}
+
+.title {
+  font-size: 3.25rem;
+  font-weight: 900;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 7rem 0;
+}
+
+/* Main Section */
+.services {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 0;
+}
+
+.transform-image {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+.transform-text {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.transform-text,
+.stand-out-text,
+.client-testimonials {
+  background-color: var(--soft-red-bg);
+}
+.graphic-design {
+  background-image: url(../images/desktop/image-graphic-design.jpg);
+  background-repeat: no-repeat;
+}
+
+.photography {
+  background-image: url(../images/desktop/image-photography.jpg);
+  background-repeat: no-repeat;
+}
+
+/* Client Testimonials Section */
+.client-testimonials {
+  text-align: center;
+  padding: 10rem 5rem;
+}
+
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.client-avatar {
+  border-radius: 50%;
+  width: 5rem;
+  height: auto;
+}
+
+.client-name {
+  font-family: var(--font-secondary);
+  font-weight: 900;
+}
+
+/* Gallery Image Section */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.gallery-image {
+  width: 100%;
+  height: auto;
+}
+
+/* Footer Section */
+footer {
+  background-color: var(--footer-bg);
+}
+
+.footer-logo {
+  fill: var(--svg-color);
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
