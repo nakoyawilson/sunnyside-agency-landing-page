@@ -35,6 +35,7 @@ body {
   grid-template-columns: auto;
   align-content: center;
   justify-content: center;
+  line-height: 1.6;
 }
 
 h1,
@@ -136,23 +137,55 @@ svg {
 /* Client Testimonials Section */
 .client-testimonials {
   text-align: center;
-  padding: 10rem 5rem;
+  padding: 5rem 5rem 10rem;
+}
+
+.testimonials-heading {
+  color: var(--grayish-blue);
+  letter-spacing: 0.275em;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  margin: 5rem 0;
 }
 
 .testimonials {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+  width: min(90%, 69rem);
+  margin: auto;
 }
 
+.testimonial {
+  color: var(--verydark-grayish-blue);
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .client-avatar {
   border-radius: 50%;
-  width: 5rem;
+  width: 4.5rem;
   height: auto;
 }
 
+.testimonial-paragraph {
+  margin: 4rem 0;
+  line-height: 1.7;
+}
+
 .client-name {
+  color: var(--desaturated-blue);
   font-family: var(--font-secondary);
   font-weight: 900;
+  margin-bottom: 0.25rem;
+}
+
+.client-role {
+  color: var(--grayish-blue);
+  font-size: 0.9rem;
 }
 
 /* Gallery Image Section */
@@ -171,6 +204,7 @@ footer {
   background-color: var(--footer-bg);
   text-align: center;
   padding: 4.6rem 0 0.1rem;
+  line-height: 1.2;
 }
 
 .footer-logo-section {
