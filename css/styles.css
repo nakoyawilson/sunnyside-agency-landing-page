@@ -49,6 +49,15 @@ h2 {
   width: min(100%, 1440px);
 }
 
+.logo {
+  transform: scale(1.35);
+}
+
+img,
+svg {
+  display: block;
+}
+
 /* Header Section */
 .header-section {
   background-image: url(../images/desktop/image-header.jpg);
@@ -160,10 +169,54 @@ h2 {
 /* Footer Section */
 footer {
   background-color: var(--footer-bg);
+  text-align: center;
+  padding: 4.6rem 0 0.1rem;
+}
+
+.footer-logo-section {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-logo-section svg {
+  margin-right: 1rem;
 }
 
 .footer-logo {
   fill: var(--svg-color);
+}
+
+.footer-links {
+  margin-bottom: 1.1rem;
+}
+
+.footer-li {
+  list-style-type: none;
+  display: inline-block;
+  color: var(--moderate-cyan);
+  margin: 1.6rem;
+}
+
+.footer-li:hover {
+  color: var(--white);
+  cursor: pointer;
+}
+
+.social-icons {
+  padding: 2.5rem;
+}
+
+.social-icon {
+  display: inline-block;
+  cursor: pointer;
+  fill: var(--white);
+  margin: 0.75rem;
+}
+
+.social-icon:hover svg.social-media path {
+  fill: var(--white);
 }
 
 .attribution {
@@ -172,4 +225,9 @@ footer {
 }
 .attribution a {
   color: var(--moderate-cyan);
+}
+
+.attribution a:hover {
+  color: var(--white);
+  text-decoration: none;
 }
