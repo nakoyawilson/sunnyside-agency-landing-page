@@ -5,6 +5,8 @@
   --font-secondary: "Fraunces", serif;
   --font-size: 18px;
   --soft-red: hsl(7, 99%, 70%);
+  --red-underline: hsl(10, 78%, 91%);
+  --yellow-underline: hsl(51, 100%, 87%);
   --soft-red-bg: hsl(30, 75%, 98%);
   --yellow: hsl(51, 100%, 49%);
   --desaturated-cyan: hsl(167, 40%, 24%);
@@ -17,6 +19,7 @@
   --grayish-blue: hsl(210, 4%, 67%);
   --white: hsl(0, 0%, 100%);
   --svg-color: hsl(168, 45%, 32%);
+  --contact-hover: hsl(199, 96%, 71%);
 }
 
 /* CSS Reset */
@@ -31,6 +34,7 @@
 body {
   font-family: var(--font-primary);
   font-size: var(--font-size);
+  font-weight: 600;
   display: grid;
   grid-template-columns: auto;
   align-content: center;
@@ -63,29 +67,65 @@ svg {
 .header-section {
   background-image: url(../images/desktop/image-header.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   display: grid;
-  grid-template-columns: auto auto;
-  justify-content: space-between;
+  grid-template-columns: 1fr;
+  grid-template-rows: 5rem auto;
   color: var(--white);
-  padding: 3rem 2.5rem;
-  height: 100vh;
+  padding: 1.5rem 2.6rem 0;
+  height: 50rem;
+}
+
+.nav-bar {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  justify-content: space-between;
+}
+
+.header-logo-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 1.25rem;
+}
+
+.nav-links {
+  margin: 0.75rem 0;
 }
 
 .nav-item {
   display: inline-block;
   list-style-type: none;
-  padding: 0 1.9rem;
+  padding: 0 1.5rem;
+  font-size: 1.1rem;
+}
+
+.nav-item:last-of-type {
+  padding-right: 0;
+}
+
+.link:hover {
+  cursor: pointer;
+  color: var(--desaturated-blue);
 }
 
 .contact {
+  display: inline-block;
   background-color: var(--white);
   color: var(--desaturated-blue);
   font-family: var(--font-secondary);
   font-weight: 700;
   text-transform: uppercase;
-  padding: 1rem 2rem;
+  padding: 0.95rem 1.75rem;
   border-radius: 50px;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.contact:hover {
+  color: var(--white);
+  background-color: var(--contact-hover);
+  cursor: pointer;
 }
 
 .header-text {
@@ -94,11 +134,17 @@ svg {
 }
 
 .title {
-  font-size: 3.25rem;
+  font-size: 3.35rem;
   font-weight: 900;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  padding: 7rem 0;
+  padding: 5.5rem 0 5rem;
+}
+
+.down-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Main Section */
@@ -124,14 +170,103 @@ svg {
 .client-testimonials {
   background-color: var(--soft-red-bg);
 }
+
+.primary-service {
+  color: var(--desaturated-blue);
+}
+
+.transform-text {
+  padding: 10rem 6.75rem 0 10.25rem;
+}
+
+.stand-out-text {
+  padding: 10.25rem 7rem 0;
+}
+
+.primary-heading {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+  font-weight: 900;
+}
+
+.primary-paragraph {
+  color: var(--dark-grayish-blue);
+  margin-bottom: 2.5rem;
+}
+
+.transform.paragraph {
+  line-height: 1.7;
+}
+
+.stand-out.primary-paragraph {
+  padding-right: 3rem;
+}
+
+.learn-more-link {
+  font-family: var(--font-secondary);
+  text-transform: uppercase;
+  font-size: 1rem;
+  padding-left: 0.5rem;
+  z-index: 10;
+  position: relative;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.border {
+  border-radius: 5px;
+  width: 8rem;
+  position: relative;
+  bottom: 0.6rem;
+}
+
+.transform.border {
+  border: 4px solid var(--yellow-underline);
+}
+
+.stand-out.border {
+  border: 4px solid var(--red-underline);
+}
+
+.learn-more-link:hover + .transform.border {
+  border-color: var(--yellow);
+}
+
+.learn-more-link:hover + .stand-out.border {
+  border-color: var(--soft-red);
+}
+
+.secondary-service {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+  padding: 3.5rem 12rem;
+}
+
 .graphic-design {
   background-image: url(../images/desktop/image-graphic-design.jpg);
   background-repeat: no-repeat;
+  color: var(--desaturated-cyan);
 }
 
 .photography {
   background-image: url(../images/desktop/image-photography.jpg);
   background-repeat: no-repeat;
+  color: var(--dark-blue);
+}
+
+.secondary-heading {
+  text-transform: capitalize;
+  font-weight: 900;
+  margin-bottom: 1.6rem;
+  font-size: 1.75rem;
+}
+
+.secondary-paragraph {
+  font-size: 1rem;
 }
 
 /* Client Testimonials Section */
