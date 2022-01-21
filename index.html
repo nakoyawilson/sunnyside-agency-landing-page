@@ -68,19 +68,20 @@
       </div>
     </header>
     <main>
-      <div class="container">
-        <div class="services">
+      <div class="services-transform">
+        <div class="container services">
           <div class="transform-image">
-            <img
-              src="images/desktop/image-transform.jpg"
-              alt=""
-              class="desktop"
-            />
-            <img
-              src="images/mobile/image-transform.jpg"
-              alt=""
-              class="mobile"
-            />
+            <picture>
+              <source
+                media="(max-width: 799px)"
+                srcset="images/mobile/image-transform.jpg"
+              />
+              <source
+                media="(min-width: 800px)"
+                srcset="images/desktop/image-transform.jpg"
+              />
+              <img src="images/desktop/image-transform.jpg" alt="" />
+            </picture>
           </div>
           <section class="primary-service transform-text">
             <h2 class="primary-heading">Transform your brand</h2>
@@ -92,17 +93,22 @@
             <p class="learn-more-link">Learn more</p>
             <div class="transform border"></div>
           </section>
+        </div>
+      </div>
+      <div class="services-stand-out">
+        <div class="container services">
           <div class="stand-out-image">
-            <img
-              src="images/desktop/image-stand-out.jpg"
-              alt=""
-              class="desktop"
-            />
-            <img
-              src="images/mobile/image-stand-out.jpg"
-              alt=""
-              class="mobile"
-            />
+            <picture>
+              <source
+                media="(max-width: 799px)"
+                srcset="images/mobile/image-stand-out.jpg"
+              />
+              <source
+                media="(min-width: 800px)"
+                srcset="images/desktop/image-stand-out.jpg"
+              />
+              <img src="images/desktop/image-stand-out.jpg" alt="" />
+            </picture>
           </div>
           <section class="primary-service stand-out-text">
             <h2 class="primary-heading">Stand out to the right audience</h2>
@@ -114,6 +120,10 @@
             <p class="learn-more-link">Learn more</p>
             <div class="stand-out border"></div>
           </section>
+        </div>
+      </div>
+      <div class="services-design-photography">
+        <div class="container services">
           <section class="graphic-design secondary-service">
             <h2 class="secondary-heading">Graphic design</h2>
             <p class="secondary-paragraph">
@@ -130,7 +140,9 @@
             </p>
           </section>
         </div>
-        <section class="client-testimonials">
+      </div>
+      <section class="client-testimonials">
+        <div class="container">
           <h2 class="testimonials-heading">Client testimonials</h2>
           <div class="testimonials">
             <div class="testimonial">
@@ -179,55 +191,77 @@
               <p class="client-role">Business Owner</p>
             </div>
           </div>
-        </section>
-        <div class="gallery">
+        </div>
+      </section>
+      <div class="gallery-section">
+        <div class="gallery container">
           <div>
-            <img
-              src="images/desktop/image-gallery-milkbottles.jpg"
-              alt=""
-              class="desktop gallery-image"
-            />
-            <img
-              src="images/mobile/image-gallery-milkbottles.jpg"
-              alt=""
-              class="mobile gallery-image"
-            />
+            <picture>
+              <source
+                media="(max-width: 799px)"
+                srcset="images/mobile/image-gallery-milkbottles.jpg"
+              />
+              <source
+                media="(min-width: 800px)"
+                srcset="images/desktop/image-gallery-milkbottles.jpg"
+              />
+              <img
+                src="images/desktop/image-gallery-milkbottles.jpg"
+                alt=""
+                class="gallery-image"
+              />
+            </picture>
           </div>
           <div>
-            <img
-              src="images/desktop/image-gallery-orange.jpg"
-              alt=""
-              class="desktop gallery-image"
-            />
-            <img
-              src="images/mobile/image-gallery-orange.jpg"
-              alt=""
-              class="mobile gallery-image"
-            />
+            <picture>
+              <source
+                media="(max-width: 799px)"
+                srcset="images/mobile/image-gallery-orange.jpg"
+              />
+              <source
+                media="(min-width: 800px)"
+                srcset="images/desktop/image-gallery-orange.jpg"
+              />
+              <img
+                src="images/desktop/image-gallery-orange.jpg"
+                alt=""
+                class="gallery-image"
+              />
+            </picture>
           </div>
           <div>
-            <img
-              src="images/desktop/image-gallery-cone.jpg"
-              alt=""
-              class="desktop gallery-image"
-            />
-            <img
-              src="images/mobile/image-gallery-cone.jpg"
-              alt=""
-              class="mobile gallery-image"
-            />
+            <picture>
+              <source
+                media="(max-width: 799px)"
+                srcset="images/mobile/image-gallery-cone.jpg"
+              />
+              <source
+                media="(min-width: 800px)"
+                srcset="images/desktop/image-gallery-cone.jpg"
+              />
+              <img
+                src="images/desktop/image-gallery-cone.jpg"
+                alt=""
+                class="gallery-image"
+              />
+            </picture>
           </div>
           <div>
-            <img
-              src="images/desktop/image-gallery-sugarcubes.jpg"
-              alt=""
-              class="desktop gallery-image"
-            />
-            <img
-              src="images/mobile/image-gallery-sugar-cubes.jpg"
-              alt=""
-              class="mobile gallery-image"
-            />
+            <picture>
+              <source
+                media="(max-width: 799px)"
+                srcset="images/mobile/image-gallery-sugar-cubes.jpg"
+              />
+              <source
+                media="(min-width: 800px)"
+                srcset="images/desktop/image-gallery-sugarcubes.jpg"
+              />
+              <img
+                src="images/desktop/image-gallery-sugarcubes.jpg"
+                alt=""
+                class="gallery-image"
+              />
+            </picture>
           </div>
         </div>
       </div>
