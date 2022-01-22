@@ -266,6 +266,7 @@ header {
 
 .stand-out.primary-paragraph {
   padding-right: 3rem;
+  margin-top: 0.5rem;
 }
 
 .learn-more-link {
@@ -471,9 +472,8 @@ footer {
 }
 
 /* Media Queries */
-@media screen and (max-width: 1439px) {
+@media screen and (max-width: 1260px) {
   .header-section {
-    /* grid-template-rows: 5rem auto; */
     color: var(--white);
     padding: 2rem 1.75rem 0;
   }
