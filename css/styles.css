@@ -595,7 +595,7 @@ footer {
 
   .contact:hover {
     color: var(--white);
-    background-color: var(--contact-hover);
+    background-color: var(--soft-red);
     cursor: pointer;
   }
 
