@@ -473,45 +473,14 @@ footer {
 
 /* Media Queries */
 @media screen and (max-width: 1260px) {
+  .transform-text,
+  .stand-out-text {
+    padding: 10% 10% 0 10%;
+  }
+
   .header-section {
     color: var(--white);
     padding: 2rem 1.75rem 0;
-  }
-
-  .services {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-  }
-
-  .transform-image {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-  }
-
-  .transform-text,
-  .stand-out-text {
-    padding: 4.5rem 1.5rem 4rem 1.75rem;
-  }
-
-  .primary-service {
-    text-align: center;
-  }
-
-  .primary-heading {
-    font-size: 1.875rem;
-  }
-
-  .stand-out.primary-paragraph {
-    padding-right: 0;
-  }
-
-  .border {
-    position: relative;
-    bottom: 0.6rem;
-    left: 0;
-    right: 0;
-    margin-inline: auto;
   }
 
   .secondary-service {
@@ -534,6 +503,33 @@ footer {
   }
 }
 
+@media screen and (max-width: 1000px) {
+  .transform-text,
+  .stand-out-text {
+    padding: 10% 5% 0 5%;
+  }
+
+  .primary-service {
+    text-align: center;
+  }
+
+  .primary-heading {
+    font-size: 1.875rem;
+  }
+
+  .stand-out.primary-paragraph {
+    padding-right: 0;
+  }
+
+  .border {
+    position: relative;
+    bottom: 0.6rem;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+  }
+}
+
 @media screen and (max-width: 810px) {
   .header-section {
     height: 45rem;
@@ -542,9 +538,7 @@ footer {
   .title {
     font-size: 2.5rem;
   }
-}
 
-@media screen and (max-width: 750px) {
   .nav-links {
     display: none;
   }
@@ -608,6 +602,22 @@ footer {
   .menu-button {
     display: flex;
     align-items: center;
+  }
+
+  .services {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .transform-image {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+
+  .transform-text,
+  .stand-out-text {
+    padding: 4.5rem 1.5rem 4rem 1.75rem;
   }
 
   .graphic-design {
