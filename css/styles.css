@@ -99,6 +99,7 @@ header {
   display: grid;
   grid-template-columns: repeat(2, auto);
   justify-content: space-between;
+  position: relative;
 }
 
 .header-logo-section {
@@ -546,6 +547,62 @@ footer {
 @media screen and (max-width: 750px) {
   .nav-links {
     display: none;
+  }
+
+  .nav-links.open {
+    display: block;
+    position: absolute;
+    top: 7rem;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    width: 100%;
+    height: auto;
+    background-color: var(--white);
+    padding-top: 3rem;
+  }
+
+  .nav-links::after {
+    content: "";
+    position: absolute;
+    top: -1.9rem;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 2rem solid var(--white);
+    border-left: 2rem solid transparent;
+  }
+
+  .nav-item {
+    display: block;
+    padding: 0;
+    text-align: center;
+    color: var(--desaturated-blue);
+    margin-bottom: 2rem;
+  }
+
+  .link:hover {
+    cursor: pointer;
+    color: var(--desaturated-blue);
+  }
+
+  .contact {
+    display: inline-block;
+    background-color: var(--yellow);
+    color: var(--desaturated-blue);
+    font-family: var(--font-secondary);
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0.95rem 1.75rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  .contact:hover {
+    color: var(--white);
+    background-color: var(--contact-hover);
+    cursor: pointer;
   }
 
   .menu-button {
